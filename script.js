@@ -6,31 +6,31 @@ function Book(author, title, pages, read) {
   this.pages = pages;
   this.read = read;
 
-  Book.prototype.readBook = function (element) {
-    const chkbox = document.createElement('input');
-    chkbox.setAttribute('type', 'checkbox');
-    chkbox.setAttribute('id', 'innerchkbox');
-  
-    const lbl = document.createElement('label');
-    lbl.setAttribute('for', 'innerchkbox');
-  
-    lbl.appendChild(document.createTextNode('Read '));
-  
-    const chkBoxDiv = document.createElement('div');
-    chkBoxDiv.setAttribute('class', 'card-label');
-    chkBoxDiv.appendChild(lbl);
-    chkBoxDiv.appendChild(chkbox);
-  
-    element.appendChild(chkBoxDiv);
-  
-    if (this.read === true) {
-      chkbox.checked = true;
-    } else {
-      chkbox.checked = false;
-    }
-  };
-
 }
+
+Book.prototype.readBook = function (element) {
+  const chkbox = document.createElement('input');
+  chkbox.setAttribute('type', 'checkbox');
+  chkbox.setAttribute('id', 'innerchkbox');
+
+  const lbl = document.createElement('label');
+  lbl.setAttribute('for', 'innerchkbox');
+
+  lbl.appendChild(document.createTextNode('Read '));
+
+  const chkBoxDiv = document.createElement('div');
+  chkBoxDiv.setAttribute('class', 'card-label');
+  chkBoxDiv.appendChild(lbl);
+  chkBoxDiv.appendChild(chkbox);
+
+  element.appendChild(chkBoxDiv);
+
+  if (this.read === true) {
+    chkbox.checked = true;
+  } else {
+    chkbox.checked = false;
+  }
+};
 
 
 
