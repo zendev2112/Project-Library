@@ -35,7 +35,7 @@ h1 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;   
-    background-color: #7BB2D9; 
+    /* background-color: #7BB2D9; */ 
 }
 
 #card {
